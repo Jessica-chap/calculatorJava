@@ -2,6 +2,7 @@ import calc.Arithmetic;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.lang.Float;
+import java.util.Random;
 
 public class Calculator {
 	public static void main(String[] args) {
@@ -64,7 +65,10 @@ public class Calculator {
 				result = Arithmetic.power(num1Float, num2Float);
 			} else if (operator.equals("mod")){
 				result = Arithmetic.mod(num1Float, num2Float);
-			} else {
+			} else if (operator.equals("rand")){
+				result = Arithmetic.random(num1Float, num2Float);
+			} 
+			else {
 				System.out.println("Please provide an operator and two numbers.");
 				continue;
 			}
